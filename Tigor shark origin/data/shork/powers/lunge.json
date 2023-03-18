@@ -1,0 +1,335 @@
+{
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:raycast",
+        "distance": 8,
+        "block": true,
+        "entity": true,
+        "shape_type": "outline",
+        "fluid_handling": "none",
+        "bientity_action": {
+            "type": "origins:target_action",
+            "action": {
+                "type": "origins:damage",
+                "amount": -1,
+                "source": {
+                    "name": "flyIntoWall"
+                }
+            }
+        },
+        "hit_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:add_velocity",
+                    "z": 1,
+                    "space": "local"
+                },
+                {
+                    "type": "origins:add_velocity",
+                    "y": 0.2,
+                    "space": "world"
+                },
+
+                {
+                    "type": "origins:damage",
+                    "amount": -1,
+                    "source": {
+                        "name": "flyIntoWall"
+                    }
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:poof ~ ~ ~ 0.6 0.02 0.6 0.1 10"
+                },
+                {
+                    
+                    "type": "origins:delay",
+                    "interval": 20,
+                    "ticks": 0,
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "summon falling_block ~ ~ ~ {BlockState:{Name:\"minecraft:snow\"},Time:1}",
+                        "permission_level": 4
+                    },
+                    "condition": {
+                        "type": "origins:biome",
+                        "condition": {
+                            "type": "origins:precipitation",
+                            "precipitation": "none"
+                        }
+                    }
+                    
+                },
+                {
+                    
+                    "type": "origins:delay",
+                    "interval": 20,
+                    "ticks": 5,
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "summon falling_block ~ ~ ~ {BlockState:{Name:\"minecraft:snow\"},Time:1}",
+                        "permission_level": 4
+                    },
+                    "condition": {
+                        "type": "origins:biome",
+                        "condition": {
+                            "type": "origins:precipitation",
+                            "precipitation": "none"
+                        }
+                    }
+                    
+                },
+                {
+                    
+                    "type": "origins:delay",
+                    "interval": 20,
+                    "ticks": 10,
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "summon falling_block ~ ~ ~ {BlockState:{Name:\"minecraft:snow\"},Time:1}",
+                        "permission_level": 4
+                    },
+                    "condition": {
+                        "type": "origins:biome",
+                        "condition": {
+                            "type": "origins:precipitation",
+                            "precipitation": "none"
+                        }
+                    }
+                    
+                },
+                {
+                    
+                    "type": "origins:delay",
+                    "interval": 20,
+                    "ticks": 15,
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "summon falling_block ~ ~ ~ {BlockState:{Name:\"minecraft:snow\"},Time:1}",
+                        "permission_level": 4
+                    },
+                    "condition": {
+                        "type": "origins:biome",
+                        "condition": {
+                            "type": "origins:precipitation",
+                            "precipitation": "none"
+                        }
+                    }
+                    
+                },
+                {
+                    
+                    "type": "origins:delay",
+                    "interval": 20,
+                    "ticks": 30,
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "summon falling_block ~ ~ ~ {BlockState:{Name:\"minecraft:snow\"},Time:1}",
+                        "permission_level": 4
+                    },
+                    "condition": {
+                        "type": "origins:biome",
+                        "condition": {
+                            "type": "origins:precipitation",
+                            "precipitation": "none"
+                        }
+                    }
+                    
+                },
+                {
+                    
+                    "type": "origins:delay",
+                    "interval": 20,
+                    "ticks": 50,
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "summon falling_block ~ ~ ~ {BlockState:{Name:\"minecraft:snow\"},Time:1}",
+                        "permission_level": 4
+                    },
+                    "condition": {
+                        "type": "origins:biome",
+                        "condition": {
+                            "type": "origins:precipitation",
+                            "precipitation": "none"
+                        }
+                    }
+                    
+                }
+            ]
+        },
+        "miss_action": 
+        {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:add_velocity",
+                    "z": 1,
+                    "space": "local"
+                },
+                {
+                    "type": "origins:add_velocity",
+                    "y": 0.2,
+                    "space": "world"
+                },
+
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:poof ~ ~ ~ 0.6 0.02 0.6 0.1 10"
+                },
+                {
+                    
+                    "type": "origins:delay",
+                    "interval": 20,
+                    "ticks": 0,
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "summon falling_block ~ ~ ~ {BlockState:{Name:\"minecraft:snow\"},Time:1}",
+                        "permission_level": 4
+                    },
+                    "condition": {
+                        "type": "origins:biome",
+                        "condition": {
+                            "type": "origins:precipitation",
+                            "precipitation": "none"
+                        }
+                    }
+                    
+                },
+                {
+                    
+                    "type": "origins:delay",
+                    "interval": 20,
+                    "ticks": 5,
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "summon falling_block ~ ~ ~ {BlockState:{Name:\"minecraft:snow\"},Time:1}",
+                        "permission_level": 4
+                    },
+                    "condition": {
+                        "type": "origins:biome",
+                        "condition": {
+                            "type": "origins:precipitation",
+                            "precipitation": "none"
+                        }
+                    }
+                    
+                },
+                {
+                    
+                    "type": "origins:delay",
+                    "interval": 20,
+                    "ticks": 10,
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "summon falling_block ~ ~ ~ {BlockState:{Name:\"minecraft:snow\"},Time:1}",
+                        "permission_level": 4
+                    },
+                    "condition": {
+                        "type": "origins:biome",
+                        "condition": {
+                            "type": "origins:precipitation",
+                            "precipitation": "none"
+                        }
+                    }
+                    
+                },
+                {
+                    
+                    "type": "origins:delay",
+                    "interval": 20,
+                    "ticks": 15,
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "summon falling_block ~ ~ ~ {BlockState:{Name:\"minecraft:snow\"},Time:1}",
+                        "permission_level": 4
+                    },
+                    "condition": {
+                        "type": "origins:biome",
+                        "condition": {
+                            "type": "origins:precipitation",
+                            "precipitation": "none"
+                        }
+                    }
+                    
+                },
+                {
+                    
+                    "type": "origins:delay",
+                    "interval": 20,
+                    "ticks": 30,
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "summon falling_block ~ ~ ~ {BlockState:{Name:\"minecraft:snow\"},Time:1}",
+                        "permission_level": 4
+                    },
+                    "condition": {
+                        "type": "origins:biome",
+                        "condition": {
+                            "type": "origins:precipitation",
+                            "precipitation": "none"
+                        }
+                    }
+                    
+                },
+                {
+                    
+                    "type": "origins:delay",
+                    "interval": 20,
+                    "ticks": 50,
+                    "action": {
+                        "type": "origins:execute_command",
+                        "command": "summon falling_block ~ ~ ~ {BlockState:{Name:\"minecraft:snow\"},Time:1}",
+                        "permission_level": 4
+                    },
+                    "condition": {
+                        "type": "origins:biome",
+                        "condition": {
+                            "type": "origins:precipitation",
+                            "precipitation": "none"
+                        }
+                    }
+                    
+                },
+                {
+                    "type": "origins:apply_effect",
+                    "effect": {
+                        "effect": "minecraft:strength",
+                        "duration": 100,
+                        "amplifier": 0
+                    }
+                },
+                {
+                    "type": "origins:apply_effect",
+                    "effect": {
+                        "effect": "minecraft:regeneration",
+                        "duration": 100,
+                        "amplifier": 0
+                    }
+                },
+                {
+                    
+                    "type": "origins:delay",
+                    "interval": 20,
+                    "ticks": 100,
+                    "action":{
+                    "type": "origins:apply_effect",
+                    "effect": {
+                        "effect": "minecraft:slowness",
+                        "duration": 80,
+                        "amplifier": 0
+                    }
+                }
+                    
+                }
+            ]
+        },
+        "command_step": 1
+    },
+    "cooldown": 200,
+    "hud_render": {
+        "should_render": true
+    },
+    "name": "Dash",
+    "description": "Allows you to dash through the air"
+}
