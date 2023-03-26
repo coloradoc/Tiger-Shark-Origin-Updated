@@ -48,7 +48,7 @@
 		},
 		"modifier": {
 			"operation": "multiply_total",
-			"value": 2
+			"value": 10
 		}
 	},
 	

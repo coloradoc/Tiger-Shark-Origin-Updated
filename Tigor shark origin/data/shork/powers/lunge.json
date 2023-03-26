@@ -22,7 +22,7 @@
             "actions": [
                 {
                     "type": "origins:add_velocity",
-                    "z": 1,
+                    "z": 1.2,
                     "space": "local"
                 },
                 {
@@ -31,13 +31,7 @@
                     "space": "world"
                 },
 
-                {
-                    "type": "origins:damage",
-                    "amount": -1,
-                    "source": {
-                        "name": "flyIntoWall"
-                    }
-                },
+                
                 {
                     "type": "origins:execute_command",
                     "command": "particle minecraft:poof ~ ~ ~ 0.6 0.02 0.6 0.1 10"
@@ -155,6 +149,17 @@
                         }
                     }
                     
+                },
+                {
+                    "type": "origins:apply_effect",
+                    "effect": {
+                        "effect": "minecraft:regeneration",
+                        "duration": 100,
+                        "amplifier": 0,
+                        "is_ambient": false,
+                        "show_particles": false,
+                        "show_icon": false
+                    }
                 }
             ]
         },
@@ -164,7 +169,7 @@
             "actions": [
                 {
                     "type": "origins:add_velocity",
-                    "z": 1,
+                    "z": 1.4,
                     "space": "local"
                 },
                 {
@@ -295,33 +300,45 @@
                     "type": "origins:apply_effect",
                     "effect": {
                         "effect": "minecraft:strength",
-                        "duration": 100,
-                        "amplifier": 0
+                        "duration": 120,
+                        "amplifier": 0,
+                        "is_ambient": false,
+                        "show_particles": false,
+                        "show_icon": false
                     }
                 },
+
                 {
                     "type": "origins:apply_effect",
                     "effect": {
-                        "effect": "minecraft:regeneration",
+                        "effect": "minecraft:absorption",
                         "duration": 100,
-                        "amplifier": 0
+                        "amplifier": 0,
+                        "is_ambient": false,
+                        "show_particles": false,
+                        "show_icon": false
                     }
                 },
                 {
                     
                     "type": "origins:delay",
                     "interval": 20,
-                    "ticks": 100,
+                    "ticks": 20,
                     "action":{
                     "type": "origins:apply_effect",
                     "effect": {
-                        "effect": "minecraft:slowness",
-                        "duration": 80,
-                        "amplifier": 0
+                        "effect": "minecraft:slow_falling",
+                        "duration": 10,
+                        "amplifier": 0,
+                        "is_ambient": false,
+                        "show_particles": false,
+                        "show_icon": false
                     }
                 }
                     
                 }
+               
+
             ]
         },
         "command_step": 1
